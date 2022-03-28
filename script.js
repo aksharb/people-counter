@@ -3,9 +3,11 @@ let countEl = document.getElementById("count-el");
 let count = 0;
 function increment() {
   count++;
-  countEl.innerText = count;
+  countEl.textContent = count;
 }
 function save() {
-  let count1 = count + " - ";
-  saveEl.innerText += count1;
+  let countStr = count + " - ";
+  saveEl.textContent += countStr;
+  count = 0;
+  countEl.textContent = count;
 }
